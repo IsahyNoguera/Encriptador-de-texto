@@ -13,7 +13,6 @@ body {
 
 .conteIni {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
@@ -45,7 +44,7 @@ body {
 .info { 
     display: flex;
     align-items: center;
-    width: 577px;
+    width: 100%;
     height: 18px;
     padding: 10px;
     margin-left: 150px;
@@ -103,12 +102,14 @@ body {
     font-family: 'Inter';
     font-size: 1.375rem;
     color: #0A3871;
+    overflow: auto;padding: 10px;
 }
 
 .Res {
     width: 300px;
     height: 360px;
     margin: 5%;
+    overflow-wrap: break-word;
 }
 
 .muneco {
@@ -133,6 +134,7 @@ body {
     font-size: 0.875rem;
     margin-bottom: 25px;
     margin-top: auto;
+    padding: 10px;
 }
 
 .texResNin {
@@ -152,55 +154,45 @@ body {
 }
 
 
-@media (max-width: 1200px) {
-    .cajEnc {
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    .info {
-        margin-left: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .cajBot {
-        margin-left: 10%;
-        width: 80%;
-    }
-
-    .enc, .des {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .con_res {
-        width: 90%;
-        height: auto;
-        margin: 20px auto;
-    }
-}
-
-@media (max-width: 992px) {
+@media (max-width: 900px) {
     .logo {
-        width: 15%;
-        margin-left: 10px;
+        width: 20%;
+        display: block;
+        position: relative;
+    }
+
+    .conteIni{
+        justify-content: none;
+        flex-wrap: wrap;
     }
 
     .cajEnc {
+        padding: 0 10px 0 10px;
+        width: 90%;
+        margin: 40px 0px 10px 15px;
+    }
+
+    
+    .info, .cajBot {
+        margin: 0;
+    }
+
+    .con_enc_bot {
+        align-items: normal;
+        margin-right: 0px;
         width: 100%;
-        margin: 20px 0;
     }
 
     .cajBot {
         width: 100%;
         margin-left: 0;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-evenly;
     }
 
     .enc, .des {
-        width: 90%;
+        width: 30%;
         margin: 10px 0;
     }
 
@@ -209,55 +201,60 @@ body {
         height: auto;
         margin: 20px auto;
     }
-}
-
-@media (max-width: 768px) {
-    .logo {
-        width: 25%;
-        margin-left: 5px;
+    
+    .texResNin {
+        font-size: 1.25rem;
+        padding: 0 10px 0 10px;
     }
 
-    .cajEnc, .info, .cajBot, .con_res {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .enc, .des {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .muneco, .Res {
-        width: 80%;
-        height: auto;
-    }
-
-    .texres {
-        margin: 10px;
-    }
-
-    .copiar {
-        width: 100%;
-        margin: 10px 0;
+    .texResNin2 {
+        font-size: 0.875rem;
+        padding: 0 10px 0 10px;
     }
 }
+
 
 @media (max-width: 576px) {
     .logo {
-        width: 40%;
+        width: 30%;
+        display: block;
+        position: relative;
     }
 
-    .cajEnc, .info, .cajBot, .con_res {
-        padding: 0 10px;
+    .conteIni{
+        justify-content: none;
     }
 
+    .cajEnc {
+        padding: 0 10px 0 10px;
+        height: 300px;
+    }
+
+    .info, .cajBot {
+        margin: 0;
+    }
+
+    .con_res {
+        padding: 0 10px 0 10px;
+        height: 300px;
+        margin: 40px 10px 50px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .con_enc_bot {
+        align-items: normal;
+        margin-right: 0px;
+    }
+    
     .cajBot {
         flex-direction: column;
         align-items: center;
     }
 
-    .enc, .des, .Res {
-        width: 100%;
+    .enc, .des{
+        width: 80%;
     }
 
     .texres {
@@ -267,9 +264,11 @@ body {
 
     .texResNin {
         font-size: 1.25rem;
+        padding: 0 10px 0 10px;
     }
 
     .texResNin2 {
         font-size: 0.875rem;
+        padding: 0 10px 0 10px;
     }
 }
